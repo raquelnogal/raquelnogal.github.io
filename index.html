@@ -92,20 +92,13 @@
 
     /* Hero */
     .hero{
-      padding:110px 0 92px;
+      padding:64px 0 56px;
       border-bottom:1px solid var(--line);
-    }
-
-    .hero-grid{
-      display:grid;
-      grid-template-columns:1.35fr .65fr;
-      gap:64px;
-      align-items:end;
     }
 
     .eyebrow{
       display:inline-block;
-      margin-bottom:20px;
+      margin-bottom:14px;
       font-size:13px;
       font-weight:600;
       letter-spacing:.08em;
@@ -113,42 +106,18 @@
       color:var(--green);
     }
 
-    .hero h1{
-      max-width:12ch;
-      font-size:clamp(46px,7vw,74px);
-      line-height:1.02;
-    }
-
     .hero .lede{
-      margin:28px 0 0;
-      max-width:58ch;
-      font-size:19px;
+      margin:14px 0 0;
+      max-width:62ch;
+      font-size:18px;
       color:var(--ink-soft);
-    }
-
-    .hero-side{
-      padding-left:22px;
-      border-left:2px solid var(--green);
-    }
-
-    .hero-side p{
-      margin:0;
-      font-size:15px;
-      color:var(--ink-soft);
-    }
-
-    .hero-side strong{
-      display:block;
-      margin-bottom:10px;
-      color:var(--ink);
-      font-size:14px;
     }
 
     .actions{
       display:flex;
       flex-wrap:wrap;
       gap:12px;
-      margin-top:36px;
+      margin-top:24px;
     }
 
     .btn{
@@ -177,7 +146,7 @@
 
     /* General section */
     section{
-      padding:78px 0;
+      padding:68px 0;
       border-bottom:1px solid var(--line);
     }
 
@@ -191,7 +160,17 @@
     }
 
     .section-head h2{font-size:34px;}
-    .section-note{font-size:14px;color:var(--ink-soft);}
+
+    .section-link{
+      font-size:14px;
+      color:var(--green);
+      text-decoration:none;
+      border-bottom:1px solid transparent;
+    }
+
+    .section-link:hover{
+      border-bottom-color:var(--green);
+    }
 
     /* About */
     #about .wrap{
@@ -479,13 +458,6 @@
     }
 
     @media(max-width:820px){
-      .hero-grid{
-        grid-template-columns:1fr;
-        gap:40px;
-      }
-
-      .hero-side{max-width:500px;}
-
       .focus-grid{
         grid-template-columns:repeat(2,1fr);
       }
@@ -503,7 +475,7 @@
         flex-wrap:wrap;
       }
 
-      .hero{padding-top:72px;}
+      .hero{padding-top:52px;}
 
       #about .wrap{
         grid-template-columns:1fr;
@@ -549,31 +521,17 @@
 <main>
 
   <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <div class="eyebrow">Communications · Digital Strategy · EU & Technology</div>
+    <div class="wrap">
+      <div class="eyebrow">Communications · Digital Strategy · EU & Technology</div>
 
-        <h1>Making complex ideas clear, relevant and human.</h1>
+      <p class="lede">
+        Experience across EU institutions, digital economy, media, privacy,
+        events and technology-focused communications.
+      </p>
 
-        <p class="lede">
-          I work across communications, digital strategy and European affairs,
-          turning complex topics into content, campaigns and experiences that
-          people can actually follow.
-        </p>
-
-        <div class="actions">
-          <a class="btn primary" href="RaquelNogalSantamaria_CV.pdf" download>Download CV</a>
-          <a class="btn ghost" href="#work">Selected work</a>
-        </div>
-      </div>
-
-      <div class="hero-side">
-        <strong>Based in Brussels</strong>
-
-        <p>
-          Experience across EU institutions, digital economy, media, privacy,
-          events and technology-focused communications.
-        </p>
+      <div class="actions">
+        <a class="btn primary" href="RaquelNogalSantamaria_CV.pdf" download>CV</a>
+        <a class="btn ghost" href="mailto:rnogalsantamaria@gmail.com">Get in touch</a>
       </div>
     </div>
   </section>
@@ -604,7 +562,6 @@
     <div class="wrap">
       <div class="section-head">
         <h2>What I work on</h2>
-        <div class="section-note">Strategy, storytelling and digital communication</div>
       </div>
 
       <div class="focus-grid">
@@ -640,7 +597,7 @@
 
       <div class="section-head">
         <h2>Experience</h2>
-        <div class="section-note">Selected roles · Full history on CV</div>
+        <a class="section-link" href="RaquelNogalSantamaria_CV.pdf" target="_blank">Full history on CV</a>
       </div>
 
       <!-- VUB / IMEC-SMIT -->
@@ -809,7 +766,6 @@
     <div class="wrap">
       <div class="section-head">
         <h2>Selected work</h2>
-        <div class="section-note">Projects across institutions, media and digital</div>
       </div>
 
       <div class="work-grid">
@@ -889,7 +845,6 @@
     <div class="wrap">
       <div class="section-head">
         <h2>Skills & languages</h2>
-        <div class="section-note">International, digital and communication-focused</div>
       </div>
 
       <div class="details-grid">
@@ -901,6 +856,7 @@
             <span class="chip">Spanish · Native</span>
             <span class="chip">English · Professional</span>
             <span class="chip">French · Upper-intermediate</span>
+            <span class="chip">German · Basic</span>
           </div>
         </div>
 
@@ -950,7 +906,7 @@
 </main>
 
 <footer>
-  <div class="wrap">© 2026 Raquel Nogal Santamaría</div>
+  <div class="wrap">Based in Brussels · Open to opportunities worldwide</div>
 </footer>
 
 </body>
