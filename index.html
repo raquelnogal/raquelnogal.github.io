@@ -280,14 +280,73 @@
       color:var(--green);
       font-size:15px;
       font-weight:500;
-    }
+    } 
 
     .role p{
       margin:8px 0 0;
       max-width:66ch;
       color:var(--ink-soft);
       font-size:15px;
-    }
+    } .role-heading{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:8px;
+}
+
+.role-logo{
+  width:44px;
+  height:44px;
+  object-fit:contain;
+  flex-shrink:0;
+  border-radius:8px;
+}
+
+.role-title h3{
+  margin:0;
+}
+
+.role-title .org{
+  margin-top:2px;
+}
+
+.role-tags{
+  margin-top:16px;
+}
+
+.tag-group{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:8px;
+}
+
+.tag-label{
+  font-size:12px;
+  font-weight:600;
+  color:var(--ink-soft);
+  margin-right:3px;
+}
+
+.skill-chip,
+.tool-chip{
+  display:inline-block;
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:12px;
+  line-height:1.2;
+}
+
+.skill-chip{
+  background:var(--green-soft);
+  color:var(--green);
+}
+
+.tool-chip{
+  background:var(--green);
+  color:white;
+}
 
     /* Work */
     #work{background:var(--paper-soft);}
