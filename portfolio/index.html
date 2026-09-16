@@ -279,6 +279,84 @@
       padding-bottom:3px;
     }
 
+    .writing-section{
+      padding:92px 0 108px;
+      border-bottom:1px solid var(--line);
+    }
+
+    .writing-layout{
+      display:grid;
+      grid-template-columns:1fr 2fr;
+      gap:56px;
+      align-items:start;
+    }
+
+    .writing-content{
+      min-width:0;
+    }
+
+    .writing-content h2{
+      margin-bottom:22px;
+    }
+
+    .writing-intro{
+      max-width:700px;
+      margin:0 0 38px;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.6;
+    }
+
+    .writing-list{
+      border-bottom:1px solid var(--line);
+    }
+
+    .writing-item{
+      display:grid;
+      grid-template-columns:150px minmax(0,1fr) auto;
+      gap:26px;
+      align-items:start;
+      padding:24px 0 26px;
+      border-top:1px solid var(--line);
+    }
+
+    .writing-meta{
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.55;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+
+    .writing-title{
+      margin:0;
+      font-size:20px;
+      line-height:1.35;
+      letter-spacing:-.02em;
+      font-weight:500;
+    }
+
+    .writing-tags{
+      margin-top:8px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.5;
+    }
+
+    .writing-link{
+      padding-top:2px;
+      color:var(--text);
+      font-size:18px;
+      line-height:1;
+      white-space:nowrap;
+    }
+
+    .writing-item:hover .writing-title{
+      text-decoration:underline;
+      text-decoration-thickness:1px;
+      text-underline-offset:4px;
+    }
+
     .more{
       padding:90px 0;
       display:flex;
@@ -387,6 +465,16 @@
       .media-three .ph:first-child{grid-column:1/-1;min-height:420px}
       .media-two{grid-template-columns:1fr}
       .media-two .ph{min-height:350px}
+      .writing-section{padding:64px 0 74px}
+      .writing-layout{grid-template-columns:1fr;gap:22px}
+      .writing-item{
+        grid-template-columns:1fr auto;
+        gap:10px 18px;
+        padding:20px 0 22px;
+      }
+      .writing-meta{grid-column:1/-1}
+      .writing-link{grid-column:2;grid-row:2}
+      .writing-title{font-size:18px}
       .more{align-items:flex-start;flex-direction:column}
     }
   </style>
@@ -541,60 +629,81 @@
       </div>
     </section>
 
-    <section class="project">
-      <div class="wrap">
-        <div class="project-head">
-          <div class="project-num">03 / Organisation</div>
-          <div>
-            <div class="eyebrow">Email marketing · Editorial</div>
-            <h2>Newsletter or email campaign</h2>
-            <div class="project-copy">
-              <p>
-                For newsletters, the project can combine one full email
-                screenshot with a close-up of the header, copy or performance
-                result.
-              </p>
-              <p class="meta">
-                <strong>My role</strong><br>
-                Copywriting<br>
-                Email production<br>
-                Editorial planning
-              </p>
-            </div>
+    <!--
+      Future portfolio case studies can be added here.
+      Placeholder blocks for newsletter/email marketing and press/content
+      have been temporarily hidden until real material is added.
+    -->
+
+    <section class="writing-section">
+      <div class="wrap writing-layout">
+        <div class="section-label">Writing &amp; media</div>
+
+        <div class="writing-content">
+          <h2>Selected writing &amp; media</h2>
+          <p class="writing-intro">
+            A small selection of articles and institutional web content I have written.
+          </p>
+
+          <div class="writing-list">
+
+            <a class="writing-item"
+               href="https://www.adigital.org/actualidad/iamericas-avanza-en-el-impulso-del-uso-responsable-de-la-inteligencia-artificial-en-america-latina/"
+               target="_blank" rel="noopener">
+              <div class="writing-meta">Adigital<br>2025 · ES</div>
+              <div>
+                <h3 class="writing-title">IAméricas avanza en el impulso del uso responsable de la inteligencia artificial en América Latina</h3>
+                <div class="writing-tags">Artificial intelligence · Responsible technology</div>
+              </div>
+              <div class="writing-link" aria-hidden="true">↗</div>
+            </a>
+
+            <a class="writing-item"
+               href="https://www.adigital.org/actualidad/la-comision-europea-presenta-su-estrategia-para-posicionar-a-europa-como-lider-en-tecnologias-cuanticas/"
+               target="_blank" rel="noopener">
+              <div class="writing-meta">Adigital<br>2025 · ES</div>
+              <div>
+                <h3 class="writing-title">La Comisión Europea presenta su estrategia para posicionar a Europa como líder en tecnologías cuánticas</h3>
+                <div class="writing-tags">EU digital policy · Quantum technologies</div>
+              </div>
+              <div class="writing-link" aria-hidden="true">↗</div>
+            </a>
+
+            <a class="writing-item"
+               href="https://www.adigital.org/actualidad/la-comision-europea-publica-una-nueva-edicion-del-informe-sobre-la-decada-digital/"
+               target="_blank" rel="noopener">
+              <div class="writing-meta">Adigital<br>2025 · ES</div>
+              <div>
+                <h3 class="writing-title">La Comisión Europea publica una nueva edición del informe sobre la Década Digital</h3>
+                <div class="writing-tags">EU digital policy · Data &amp; evidence synthesis</div>
+              </div>
+              <div class="writing-link" aria-hidden="true">↗</div>
+            </a>
+
+            <a class="writing-item"
+               href="https://www.adigital.org/actualidad/adigital-y-estech-promueven-la-declaracion-de-la-coalicion-s9-para-impulsar-el-avance-tecnologico-en-europa/"
+               target="_blank" rel="noopener">
+              <div class="writing-meta">Adigital<br>2025 · ES</div>
+              <div>
+                <h3 class="writing-title">Adigital y EsTech promueven la declaración de la coalición S9+ para impulsar el avance tecnológico en Europa</h3>
+                <div class="writing-tags">European tech policy · Advocacy</div>
+              </div>
+              <div class="writing-link" aria-hidden="true">↗</div>
+            </a>
+
+            <a class="writing-item"
+               href="https://www.cpdpconferences.org/news/save-the-date-cpdp-2027-8-11-march-2027"
+               target="_blank" rel="noopener">
+              <div class="writing-meta">CPDP<br>2026 · EN</div>
+              <div>
+                <h3 class="writing-title">Save the date: CPDP 2027 | 8–11 March 2027</h3>
+                <div class="writing-tags">Conference communications · Institutional web content</div>
+              </div>
+              <div class="writing-link" aria-hidden="true">↗</div>
+            </a>
+
           </div>
         </div>
-
-        <div class="media-two">
-          <div class="ph">Newsletter screenshot</div>
-          <div class="ph">Detail / result</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="project">
-      <div class="wrap">
-        <div class="project-head">
-          <div class="project-num">04 / Organisation</div>
-          <div>
-            <div class="eyebrow">Press · Content · Campaign</div>
-            <h2>Another selected project</h2>
-            <div class="project-copy">
-              <p>
-                The portfolio does not need every piece of work. Each section
-                should prove a different capability and use the strongest
-                available material.
-              </p>
-              <p class="meta">
-                <strong>My role</strong><br>
-                Press relations<br>
-                Content strategy<br>
-                Digital communication
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="media-large">Press / web / campaign visual</div>
       </div>
     </section>
 
