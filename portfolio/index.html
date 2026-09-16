@@ -187,6 +187,56 @@
       text-transform:uppercase;
     }
 
+    .reels-grid{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0, 1fr));
+      gap:18px;
+      align-items:start;
+    }
+
+    .reel-card{
+      min-width:0;
+    }
+
+    .reel-embed{
+      width:100%;
+      aspect-ratio:9 / 16;
+      background:var(--soft);
+      overflow:hidden;
+      border:1px solid var(--line);
+    }
+
+    .reel-embed iframe{
+      width:100%;
+      height:100%;
+      border:0;
+      display:block;
+      background:#fff;
+    }
+
+    .reel-caption{
+      margin-top:12px;
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      align-items:baseline;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.45;
+    }
+
+    .reel-caption strong{
+      color:var(--text);
+      font-weight:500;
+    }
+
+    .reel-caption a{
+      white-space:nowrap;
+      color:var(--text);
+      border-bottom:1px solid var(--text);
+      padding-bottom:2px;
+    }
+
     .media-three{
       display:grid;
       grid-template-columns:1.15fr .85fr .85fr;
@@ -279,6 +329,8 @@
       .media-feature{width:100%}
       .media-feature .image-frame{min-height:260px}
       .media-large{min-height:330px}
+      .reels-grid{grid-template-columns:1fr}
+      .reel-embed{max-width:420px}
       .media-three{grid-template-columns:1fr 1fr}
       .media-three .ph{min-height:340px}
       .media-three .ph:first-child{grid-column:1/-1;min-height:420px}
@@ -319,30 +371,72 @@
         <div class="project-head">
           <div class="project-num">01 / European Parliament</div>
           <div>
-            <div class="eyebrow">Social media · Video · Youth communication</div>
-            <h2>Project title goes here</h2>
+            <div class="eyebrow">Social media · Short-form video · Campaigns</div>
+            <h2>Social media &amp; youth communication</h2>
             <div class="project-copy">
               <p>
-                Short project description. Two or three sentences are enough:
-                what the communication challenge was, what you contributed,
-                and why the work mattered.
+                During my Schuman traineeship at the European Parliament Liaison Office
+                in Spain, I contributed to digital communication across social media and
+                institutional campaigns. My work included creating short-form video content,
+                supporting campaign communications, and adapting institutional messages to
+                more accessible and platform-native formats.
               </p>
               <p class="meta">
                 <strong>My role</strong><br>
                 Content creation<br>
-                Campaign support<br>
-                Short-form video
+                Short-form video<br>
+                Campaign support
               </p>
             </div>
           </div>
         </div>
 
-        <div class="media-three">
-          <div class="ph">Main image / Reel</div>
-          <div class="ph">Image / Reel</div>
-          <div class="ph">Image / Reel</div>
+        <div class="reels-grid">
+          <article class="reel-card">
+            <div class="reel-embed">
+              <iframe
+                src="https://www.instagram.com/reel/Cn7OpdiAMmO/embed/"
+                title="Roberta Metsola meets young people in Madrid — European Parliament Instagram Reel"
+                loading="lazy"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <div class="reel-caption">
+              <strong>Roberta Metsola meets young people in Madrid</strong>
+              <a href="https://www.instagram.com/reel/Cn7OpdiAMmO/" target="_blank" rel="noopener">Instagram ↗</a>
+            </div>
+          </article>
+
+          <article class="reel-card">
+            <div class="reel-embed">
+              <iframe
+                src="https://www.instagram.com/reel/CoCtf1fgSZM/embed/"
+                title="Benidorm Fest content creator campaign — European Parliament Instagram Reel"
+                loading="lazy"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <div class="reel-caption">
+              <strong>Benidorm Fest content creator campaign</strong>
+              <a href="https://www.instagram.com/reel/CoCtf1fgSZM/" target="_blank" rel="noopener">Instagram ↗</a>
+            </div>
+          </article>
+
+          <article class="reel-card">
+            <div class="reel-embed">
+              <iframe
+                src="https://www.instagram.com/reel/CjkpZ9VA1jQ/embed/"
+                title="Schuman Traineeships — European Parliament Instagram Reel"
+                loading="lazy"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <div class="reel-caption">
+              <strong>Schuman Traineeships</strong>
+              <a href="https://www.instagram.com/reel/CjkpZ9VA1jQ/" target="_blank" rel="noopener">Instagram ↗</a>
+            </div>
+          </article>
         </div>
-        <a class="project-link" href="#">View project / link ↗</a>
       </div>
     </section>
 
