@@ -161,6 +161,7 @@
     }
     .project-visual > *{
       grid-column:2;
+      justify-self:start;
     }
 
     .media-feature{
@@ -336,17 +337,31 @@
 
     .email-preview{
       width:100%;
-      aspect-ratio:4 / 3;
-      overflow:hidden;
       background:transparent;
+      overflow:visible;
     }
 
     .email-preview img{
       width:100%;
-      height:100%;
-      object-fit:cover;
-      object-position:top center;
+      height:auto;
+      max-height:520px;
+      object-fit:contain;
+      object-position:top left;
       display:block;
+    }
+
+
+    .email-card.cpdp .email-preview img{
+      max-height:520px;
+      width:auto;
+      max-width:100%;
+      margin:0;
+    }
+
+    .email-card.adigital .email-preview img{
+      max-height:360px;
+      width:100%;
+      object-fit:contain;
     }
 
     .email-card h3{
@@ -754,7 +769,7 @@
 
           <div class="email-grid">
 
-            <article class="email-card">
+            <article class="email-card cpdp">
               <div class="email-preview">
                 <img
                   src="./email_cpdp.png"
@@ -774,7 +789,7 @@
               </a>
             </article>
 
-            <article class="email-card">
+            <article class="email-card adigital">
               <div class="email-preview">
                 <img
                   src="./email_weekly_briefing.png"
