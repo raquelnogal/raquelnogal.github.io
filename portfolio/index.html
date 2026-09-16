@@ -60,7 +60,7 @@
     .links a.active,.links a:hover{color:var(--text)}
 
     .hero{
-      padding:92px 0 104px;
+      padding:72px 0 58px;
       border-bottom:1px solid var(--line);
     }
     .kicker{
@@ -79,8 +79,8 @@
       font-weight:500;
     }
     .intro{
-      max-width:650px;
-      margin:44px 0 0 auto;
+      max-width:700px;
+      margin:26px 0 0;
       font-size:20px;
       line-height:1.5;
     }
@@ -301,6 +301,55 @@
       line-height:1.6;
     }
 
+    #contact{
+      padding:72px 0 54px;
+      border-bottom:none;
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1fr 2fr;
+      gap:56px;
+      align-items:start;
+    }
+
+    .contact-content{
+      width:100%;
+      max-width:var(--narrow);
+    }
+
+    #contact h2{
+      margin:0;
+      font-size:clamp(44px,6vw,78px);
+      line-height:.98;
+      letter-spacing:-.05em;
+      font-weight:500;
+    }
+
+    .contact-list{
+      margin-top:26px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:24px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .contact-list a{
+      color:var(--text);
+      border-bottom:1px solid var(--text);
+      padding-bottom:3px;
+    }
+
+
+    .section-label{
+      color:var(--muted);
+      font-size:13px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      padding-top:7px;
+    }
+
     footer{
       border-top:1px solid var(--line);
       padding:30px 0 38px;
@@ -309,7 +358,7 @@
     }
     .footer-row{
       display:flex;
-      justify-content:space-between;
+      justify-content:flex-start;
       gap:20px;
       flex-wrap:wrap;
     }
@@ -318,11 +367,13 @@
       .wrap{width:min(calc(100% - 30px), var(--max))}
       header{min-height:70px}
       .links{gap:16px;font-size:12px}
-      .hero{padding:64px 0 72px}
+      .hero{padding:56px 0 48px}
       h1{font-size:56px}
-      .intro{font-size:17px;margin-top:34px}
+      .intro{font-size:17px;margin-top:22px}
       .project{padding:64px 0 74px}
       .project-head{grid-template-columns:1fr;gap:20px;margin-bottom:34px}
+      .contact-grid{grid-template-columns:1fr;gap:24px}
+      #contact{padding:56px 0 44px}
       .project-copy{grid-template-columns:1fr;gap:18px}
       .project-visual{grid-template-columns:1fr;gap:0}
       .project-visual > *{grid-column:1}
@@ -547,21 +598,31 @@
       </div>
     </section>
 
-    <section class="more">
-      <div class="wrap more" style="padding:0;">
-        <h3>More work can be added over time.</h3>
-        <p>
-          The structure stays the same; we simply add or remove project blocks
-          as your portfolio grows.
-        </p>
+    <section id="contact">
+      <div class="wrap contact-grid">
+        <div class="section-label">Contact</div>
+
+        <div class="contact-content">
+          <h2>Interested in working together?</h2>
+
+          <div class="contact-list">
+            <span>rnogalsantamaria [at] gmail [dot] com</span>
+
+            <a href="https://www.linkedin.com/in/raquel-nogal-santamaria/"
+               target="_blank"
+               rel="noopener">
+              LinkedIn ↗
+            </a>
+          </div>
+        </div>
       </div>
     </section>
+
   </main>
 
   <footer>
     <div class="wrap footer-row">
-      <span>Raquel Nogal Santamaría</span>
-      <span>Communications · Digital Strategy · EU & Technology</span>
+      <span>Raquel Nogal Santamaría&nbsp;&nbsp;|&nbsp;&nbsp;Currently based in Brussels, Belgium</span>
     </div>
   </footer>
 
