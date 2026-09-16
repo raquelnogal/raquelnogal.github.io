@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio — Raquel Nogal Santamaría</title>
+  <meta name="description" content="Selected communications work by Raquel Nogal Santamaría." />
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#111111;
+      --muted:#6f6f6f;
+      --line:#dedede;
+      --soft:#f3f3f1;
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:Arial, Helvetica, sans-serif;
+      -webkit-font-smoothing:antialiased;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    .wrap{
+      width:min(calc(100% - 48px), var(--max));
+      margin:0 auto;
+    }
+
+    header{
+      min-height:82px;
+      display:flex;
+      align-items:center;
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      width:100%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:32px;
+    }
+    .brand{
+      font-size:15px;
+      font-weight:700;
+      letter-spacing:.02em;
+    }
+    .links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:28px;
+      font-size:14px;
+    }
+    .links a{color:var(--muted)}
+    .links a.active,.links a:hover{color:var(--text)}
+
+    .hero{
+      padding:92px 0 104px;
+      border-bottom:1px solid var(--line);
+    }
+    .kicker{
+      margin:0 0 26px;
+      color:var(--muted);
+      font-size:13px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+    h1{
+      margin:0;
+      max-width:850px;
+      font-size:clamp(54px,8vw,112px);
+      line-height:.92;
+      letter-spacing:-.055em;
+      font-weight:500;
+    }
+    .intro{
+      max-width:650px;
+      margin:44px 0 0 auto;
+      font-size:20px;
+      line-height:1.5;
+    }
+
+    .project{
+      padding:92px 0 108px;
+      border-bottom:1px solid var(--line);
+    }
+    .project-head{
+      display:grid;
+      grid-template-columns:1fr 2fr;
+      gap:56px;
+      margin-bottom:50px;
+      align-items:start;
+    }
+    .project-num{
+      color:var(--muted);
+      font-size:13px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      padding-top:7px;
+    }
+    .eyebrow{
+      color:var(--muted);
+      text-transform:uppercase;
+      letter-spacing:.1em;
+      font-size:12px;
+      margin-bottom:15px;
+    }
+    h2{
+      margin:0;
+      font-size:clamp(34px,5vw,66px);
+      line-height:1;
+      letter-spacing:-.045em;
+      font-weight:500;
+      max-width:850px;
+    }
+    .project-copy{
+      display:grid;
+      grid-template-columns:1.5fr 1fr;
+      gap:60px;
+      margin-top:30px;
+      max-width:850px;
+    }
+    .project-copy p{
+      margin:0;
+      color:#2d2d2d;
+      font-size:16px;
+      line-height:1.65;
+    }
+    .meta{
+      font-size:13px !important;
+      color:var(--muted) !important;
+      line-height:1.7 !important;
+    }
+
+    .media-large{
+      min-height:560px;
+      background:var(--soft);
+      display:grid;
+      place-items:center;
+      color:#949494;
+      font-size:12px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    .media-three{
+      display:grid;
+      grid-template-columns:1.15fr .85fr .85fr;
+      gap:18px;
+    }
+    .media-three .ph{
+      min-height:520px;
+      background:var(--soft);
+      display:grid;
+      place-items:center;
+      color:#949494;
+      font-size:12px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    .media-two{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+    .media-two .ph{
+      min-height:470px;
+      background:var(--soft);
+      display:grid;
+      place-items:center;
+      color:#949494;
+      font-size:12px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    .project-link{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      margin-top:28px;
+      font-size:14px;
+      border-bottom:1px solid var(--text);
+      padding-bottom:3px;
+    }
+
+    .more{
+      padding:90px 0;
+      display:flex;
+      justify-content:space-between;
+      gap:32px;
+      align-items:flex-end;
+    }
+    .more h3{
+      margin:0;
+      max-width:650px;
+      font-size:clamp(38px,6vw,74px);
+      line-height:1;
+      letter-spacing:-.045em;
+      font-weight:500;
+    }
+    .more p{
+      margin:0;
+      max-width:330px;
+      color:var(--muted);
+      line-height:1.6;
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      padding:30px 0 38px;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .footer-row{
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    @media(max-width:760px){
+      .wrap{width:min(calc(100% - 30px), var(--max))}
+      header{min-height:70px}
+      .links{gap:16px;font-size:12px}
+      .hero{padding:64px 0 72px}
+      h1{font-size:56px}
+      .intro{font-size:17px;margin-top:34px}
+      .project{padding:64px 0 74px}
+      .project-head{grid-template-columns:1fr;gap:20px;margin-bottom:34px}
+      .project-copy{grid-template-columns:1fr;gap:18px}
+      .media-large{min-height:330px}
+      .media-three{grid-template-columns:1fr 1fr}
+      .media-three .ph{min-height:340px}
+      .media-three .ph:first-child{grid-column:1/-1;min-height:420px}
+      .media-two{grid-template-columns:1fr}
+      .media-two .ph{min-height:350px}
+      .more{align-items:flex-start;flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="../">RN</a>
+      <nav class="links" aria-label="Main navigation">
+        <a href="../#about">About</a>
+        <a href="../#experience">Experience</a>
+        <a class="active" href="./">Portfolio</a>
+        <a href="../#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <p class="kicker">Selected work</p>
+        <h1>Portfolio</h1>
+        <p class="intro">
+          A selection of communications work across social media, campaigns,
+          press, email marketing and editorial content.
+        </p>
+      </div>
+    </section>
+
+    <section class="project">
+      <div class="wrap">
+        <div class="project-head">
+          <div class="project-num">01 / European Parliament</div>
+          <div>
+            <div class="eyebrow">Social media · Video · Youth communication</div>
+            <h2>Project title goes here</h2>
+            <div class="project-copy">
+              <p>
+                Short project description. Two or three sentences are enough:
+                what the communication challenge was, what you contributed,
+                and why the work mattered.
+              </p>
+              <p class="meta">
+                <strong>My role</strong><br>
+                Content creation<br>
+                Campaign support<br>
+                Short-form video
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="media-three">
+          <div class="ph">Main image / Reel</div>
+          <div class="ph">Image / Reel</div>
+          <div class="ph">Image / Reel</div>
+        </div>
+        <a class="project-link" href="#">View project / link ↗</a>
+      </div>
+    </section>
+
+    <section class="project">
+      <div class="wrap">
+        <div class="project-head">
+          <div class="project-num">02 / European Parliament</div>
+          <div>
+            <div class="eyebrow">Campaign · Institutional communication</div>
+            <h2>Europe Day × ONCE</h2>
+            <div class="project-copy">
+              <p>
+                This format works well for a project with one strong visual:
+                a campaign, a printed piece, an event or a press activation.
+              </p>
+              <p class="meta">
+                <strong>My role</strong><br>
+                Visual concept<br>
+                Campaign support
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="media-large">Large campaign image</div>
+        <a class="project-link" href="#">View project / coverage ↗</a>
+      </div>
+    </section>
+
+    <section class="project">
+      <div class="wrap">
+        <div class="project-head">
+          <div class="project-num">03 / Organisation</div>
+          <div>
+            <div class="eyebrow">Email marketing · Editorial</div>
+            <h2>Newsletter or email campaign</h2>
+            <div class="project-copy">
+              <p>
+                For newsletters, the project can combine one full email
+                screenshot with a close-up of the header, copy or performance
+                result.
+              </p>
+              <p class="meta">
+                <strong>My role</strong><br>
+                Copywriting<br>
+                Email production<br>
+                Editorial planning
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="media-two">
+          <div class="ph">Newsletter screenshot</div>
+          <div class="ph">Detail / result</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project">
+      <div class="wrap">
+        <div class="project-head">
+          <div class="project-num">04 / Organisation</div>
+          <div>
+            <div class="eyebrow">Press · Content · Campaign</div>
+            <h2>Another selected project</h2>
+            <div class="project-copy">
+              <p>
+                The portfolio does not need every piece of work. Each section
+                should prove a different capability and use the strongest
+                available material.
+              </p>
+              <p class="meta">
+                <strong>My role</strong><br>
+                Press relations<br>
+                Content strategy<br>
+                Digital communication
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="media-large">Press / web / campaign visual</div>
+      </div>
+    </section>
+
+    <section class="more">
+      <div class="wrap more" style="padding:0;">
+        <h3>More work can be added over time.</h3>
+        <p>
+          The structure stays the same; we simply add or remove project blocks
+          as your portfolio grows.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>Raquel Nogal Santamaría</span>
+      <span>Communications · Digital Strategy · EU & Technology</span>
+    </div>
+  </footer>
+
+</body>
+</html>
