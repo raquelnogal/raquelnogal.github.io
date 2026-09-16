@@ -319,22 +319,17 @@
     }
 
     .email-preview{
-      min-height:470px;
-      background:var(--soft);
-      border:1px solid var(--line);
-      display:flex;
-      align-items:center;
-      justify-content:center;
+      width:100%;
+      aspect-ratio:4 / 3;
       overflow:hidden;
-      padding:18px;
+      background:transparent;
     }
 
     .email-preview img{
-      max-width:100%;
-      max-height:440px;
-      width:auto;
-      height:auto;
-      object-fit:contain;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:top center;
       display:block;
     }
 
@@ -554,8 +549,6 @@
       .email-section{padding:64px 0 74px}
       .email-layout{grid-template-columns:1fr;gap:22px}
       .email-grid{grid-template-columns:1fr}
-      .email-preview{min-height:360px}
-      .email-preview img{max-height:330px}
       .writing-section{padding:64px 0 74px}
       .writing-layout{grid-template-columns:1fr;gap:22px}
       .writing-item{
@@ -733,8 +726,7 @@
         <div class="email-content">
           <h2>Email marketing &amp; newsletters</h2>
           <p class="email-intro">
-            Newsletter work across editorial content, design, production and campaign delivery,
-            adapting information to clear, accessible email formats for different audiences.
+            Newsletter work across editorial content, design, production and campaign delivery.
           </p>
 
           <div class="email-grid">
@@ -750,8 +742,13 @@
               <div class="email-org">CPDP · 2026</div>
               <h3>CPDP 2026 recap newsletter</h3>
               <p class="email-role">
-                Newsletter design · Email production · Campaign delivery
+                Content writing · Newsletter design · Campaign delivery
               </p>
+              <a class="project-link"
+                 href="./email_cpdp.png"
+                 target="_blank" rel="noopener">
+                View full design ↗
+              </a>
             </article>
 
             <article class="email-card">
@@ -765,7 +762,7 @@
               <div class="email-org">Adigital · 2024</div>
               <h3>Adigital Policy Weekly Briefing</h3>
               <p class="email-role">
-                Editorial contribution · Email production · Campaign delivery
+                Editorial contribution · Email production
               </p>
               <a class="project-link"
                  href="https://emails.adigital.org/t/d-e-smgc-iklrldkidt-ih/"
