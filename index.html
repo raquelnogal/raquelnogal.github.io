@@ -18,6 +18,7 @@
       --line:#dedede;
       --soft:#f3f3f1;
       --max:1180px;
+      --narrow:700px;
     }
 
     *{box-sizing:border-box}
@@ -94,30 +95,23 @@
       font-weight:500;
     }
 
-    .hero-bottom{
+    .hero-lower{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:56px;
-      margin-top:44px;
-      align-items:end;
-    }
-
-    .hero-intro{
-      grid-column:2;
-      max-width:650px;
-      margin:0;
-      font-size:20px;
-      line-height:1.5;
-      color:var(--body);
+      margin-top:42px;
+      min-height:110px;
     }
 
     .hero-actions{
-      grid-column:2;
       display:flex;
       flex-wrap:wrap;
+      align-items:flex-start;
       gap:26px;
-      margin-top:-22px;
-      justify-content:flex-end;
+    }
+
+    .hero-empty{
+      min-height:1px;
     }
 
     .text-link{
@@ -260,7 +254,6 @@
       object-fit:contain;
       object-position:left center;
       margin-top:15px;
-      filter:grayscale(1);
     }
 
     .role h3{
@@ -319,7 +312,8 @@
     }
 
     .portfolio-cta-content{
-      max-width:850px;
+      width:100%;
+      max-width:var(--narrow);
     }
 
     .portfolio-cta h2{
@@ -389,9 +383,13 @@
       align-items:start;
     }
 
+    .contact-content{
+      width:100%;
+      max-width:var(--narrow);
+    }
+
     #contact h2{
       margin:0;
-      max-width:800px;
       font-size:clamp(44px,6vw,78px);
       line-height:.98;
       letter-spacing:-.05em;
@@ -422,7 +420,7 @@
 
     .footer-row{
       display:flex;
-      justify-content:space-between;
+      justify-content:flex-start;
       gap:20px;
       flex-wrap:wrap;
     }
@@ -460,24 +458,19 @@
         font-size:56px;
       }
 
-      .hero-bottom{
+      .hero-lower{
         grid-template-columns:1fr;
         gap:26px;
         margin-top:34px;
-      }
-
-      .hero-intro,
-      .hero-actions{
-        grid-column:1;
-      }
-
-      .hero-intro{
-        font-size:17px;
+        min-height:0;
       }
 
       .hero-actions{
         justify-content:flex-start;
-        margin-top:0;
+      }
+
+      .hero-empty{
+        display:none;
       }
 
       section.content-section,
@@ -549,16 +542,13 @@
         <p class="kicker">Communications · Digital Strategy · EU & Technology</p>
         <h1>Raquel Nogal Santamaría</h1>
 
-        <div class="hero-bottom">
-          <p class="hero-intro">
-            Experience across EU institutions, digital economy, media, privacy,
-            events and technology-focused communications.
-          </p>
-
+        <div class="hero-lower">
           <div class="hero-actions">
+            <a class="text-link" href="#contact">Get in touch ↘</a>
             <a class="text-link" href="RaquelNogalSantamaria_CV.pdf" target="_blank">View CV ↗</a>
-            <a class="text-link" href="mailto:rnogalsantamaria@gmail.com">Get in touch ↗</a>
           </div>
+
+          <div class="hero-empty" aria-hidden="true"></div>
         </div>
       </div>
     </section>
@@ -571,13 +561,13 @@
           <p>
             I am a communications professional working across digital strategy,
             content, press, events and European affairs, with a particular
-            interest in technology and the way complex digital issues are
-            communicated to different audiences.
+            interest in technology and in making complex digital issues accessible
+            to different audiences.
           </p>
 
           <p>
-            My experience spans EU institutions, digital economy organisations,
-            journalism, international conferences and, more recently, research.
+            My experience spans EU institutions, the digital economy, media,
+            privacy and international events, as well as more recent research work.
             I am used to moving between formats and audiences — from social media
             and newsletters to press materials, podcasts, events and policy-related content.
           </p>
@@ -797,23 +787,37 @@
             <h3>Languages</h3>
             <div class="chips">
               <span class="chip">Spanish · Native</span>
-              <span class="chip">English · Professional</span>
-              <span class="chip">French · Upper-intermediate</span>
-              <span class="chip">German · Basic</span>
+              <span class="chip">English · C2</span>
+              <span class="chip">French · B2</span>
+              <span class="chip">German · A1</span>
             </div>
           </div>
 
           <div class="detail-block">
             <h3>Skills</h3>
             <div class="chips">
-              <span class="chip">Press relations</span>
-              <span class="chip">Social media</span>
-              <span class="chip">Newsletters</span>
-              <span class="chip">Events</span>
-              <span class="chip">Content strategy</span>
-              <span class="chip">Digital policy</span>
-              <span class="chip">Podcast &amp; video</span>
-              <span class="chip">Web content</span>
+              <span class="chip">Desk Research</span>
+              <span class="chip">Policy Analysis</span>
+              <span class="chip">Data Governance</span>
+              <span class="chip">Digital Policy</span>
+              <span class="chip">Research Analysis</span>
+              <span class="chip">Comparative Analysis</span>
+              <span class="chip">Evidence Synthesis</span>
+              <span class="chip">Media Relations</span>
+              <span class="chip">Social Media Strategy</span>
+              <span class="chip">Email Marketing</span>
+              <span class="chip">Event Communications</span>
+              <span class="chip">Partnerships</span>
+              <span class="chip">Project Management</span>
+              <span class="chip">Content Strategy</span>
+              <span class="chip">Press Relations</span>
+              <span class="chip">Podcast &amp; Video</span>
+              <span class="chip">Editorial Adaptation</span>
+              <span class="chip">Audience Engagement</span>
+              <span class="chip">Content Creation</span>
+              <span class="chip">Institutional Communication</span>
+              <span class="chip">Campaign Management</span>
+              <span class="chip">Youth Engagement</span>
             </div>
           </div>
         </div>
@@ -824,19 +828,17 @@
       <div class="wrap contact-grid">
         <div class="section-label">Contact</div>
 
-        <div>
+        <div class="contact-content">
           <h2>Interested in working together?</h2>
 
           <div class="contact-list">
-            <a href="mailto:rnogalsantamaria@gmail.com">rnogalsantamaria@gmail.com</a>
+            <span>rnogalsantamaria [at] gmail [dot] com</span>
 
             <a href="https://www.linkedin.com/in/raquel-nogal-santamaria/"
                target="_blank"
                rel="noopener">
               LinkedIn ↗
             </a>
-
-            <span>Brussels, Belgium</span>
           </div>
         </div>
       </div>
@@ -846,8 +848,7 @@
 
   <footer>
     <div class="wrap footer-row">
-      <span>Raquel Nogal Santamaría</span>
-      <span>Communications · Digital Strategy · EU & Technology</span>
+      <span>Raquel Nogal Santamaría&nbsp;&nbsp;|&nbsp;&nbsp;Currently based in Brussels, Belgium</span>
     </div>
   </footer>
 
