@@ -279,6 +279,92 @@
       padding-bottom:3px;
     }
 
+    .email-section{
+      padding:92px 0 108px;
+      border-bottom:1px solid var(--line);
+    }
+
+    .email-layout{
+      display:grid;
+      grid-template-columns:1fr 2fr;
+      gap:56px;
+      align-items:start;
+    }
+
+    .email-content{
+      min-width:0;
+    }
+
+    .email-content h2{
+      margin-bottom:22px;
+    }
+
+    .email-intro{
+      max-width:700px;
+      margin:0 0 38px;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.6;
+    }
+
+    .email-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:22px;
+      align-items:start;
+    }
+
+    .email-card{
+      min-width:0;
+    }
+
+    .email-preview{
+      min-height:470px;
+      background:var(--soft);
+      border:1px solid var(--line);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+      padding:18px;
+    }
+
+    .email-preview img{
+      max-width:100%;
+      max-height:440px;
+      width:auto;
+      height:auto;
+      object-fit:contain;
+      display:block;
+    }
+
+    .email-card h3{
+      margin:18px 0 8px;
+      font-size:21px;
+      line-height:1.25;
+      letter-spacing:-.02em;
+      font-weight:500;
+    }
+
+    .email-org{
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.5;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+
+    .email-role{
+      margin:10px 0 0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.55;
+    }
+
+    .email-card .project-link{
+      margin-top:16px;
+    }
+
     .writing-section{
       padding:92px 0 108px;
       border-bottom:1px solid var(--line);
@@ -465,6 +551,11 @@
       .media-three .ph:first-child{grid-column:1/-1;min-height:420px}
       .media-two{grid-template-columns:1fr}
       .media-two .ph{min-height:350px}
+      .email-section{padding:64px 0 74px}
+      .email-layout{grid-template-columns:1fr;gap:22px}
+      .email-grid{grid-template-columns:1fr}
+      .email-preview{min-height:360px}
+      .email-preview img{max-height:330px}
       .writing-section{padding:64px 0 74px}
       .writing-layout{grid-template-columns:1fr;gap:22px}
       .writing-item{
@@ -635,6 +726,59 @@
       have been temporarily hidden until real material is added.
     -->
 
+    <section class="email-section">
+      <div class="wrap email-layout">
+        <div class="section-label">03 / Email marketing</div>
+
+        <div class="email-content">
+          <h2>Email marketing &amp; newsletters</h2>
+          <p class="email-intro">
+            Newsletter work across editorial content, design, production and campaign delivery,
+            adapting information to clear, accessible email formats for different audiences.
+          </p>
+
+          <div class="email-grid">
+
+            <article class="email-card">
+              <div class="email-preview">
+                <img
+                  src="./email_cpdp.png"
+                  alt="CPDP 2026 recap newsletter designed by Raquel Nogal"
+                  loading="lazy"
+                >
+              </div>
+              <div class="email-org">CPDP · 2026</div>
+              <h3>CPDP 2026 recap newsletter</h3>
+              <p class="email-role">
+                Newsletter design · Email production · Campaign delivery
+              </p>
+            </article>
+
+            <article class="email-card">
+              <div class="email-preview">
+                <img
+                  src="./email_weekly_briefing.png"
+                  alt="Adigital Policy Weekly Briefing newsletter"
+                  loading="lazy"
+                >
+              </div>
+              <div class="email-org">Adigital · 2024</div>
+              <h3>Adigital Policy Weekly Briefing</h3>
+              <p class="email-role">
+                Editorial contribution · Email production · Campaign delivery
+              </p>
+              <a class="project-link"
+                 href="https://emails.adigital.org/t/d-e-smgc-iklrldkidt-ih/"
+                 target="_blank" rel="noopener">
+                View newsletter ↗
+              </a>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="writing-section">
       <div class="wrap writing-layout">
         <div class="section-label">Writing &amp; media</div>
@@ -642,7 +786,8 @@
         <div class="writing-content">
           <h2>Selected writing &amp; media</h2>
           <p class="writing-intro">
-            A small selection of articles and institutional web content I have written.
+            A small selection of articles and institutional web content I have written,
+            focused on digital policy, emerging technology and European affairs.
           </p>
 
           <div class="writing-list">
