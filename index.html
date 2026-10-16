@@ -72,46 +72,59 @@
     .links a{color:var(--muted)}
     .links a:hover{color:var(--text)}
 
-    /* Hero */
-    .hero{
-      padding:92px 0 64px;
-      border-bottom:1px solid var(--line);
-    }
+/* Hero */
+.hero{
+  padding:92px 0 64px;
+  border-bottom:1px solid var(--line);
+}
 
-    .kicker{
-      margin:0 0 26px;
-      color:var(--muted);
-      font-size:13px;
-      letter-spacing:.12em;
-      text-transform:uppercase;
-    }
+.hero-grid{
+  display:grid;
+  grid-template-columns:minmax(0, 1fr) 360px;
+  gap:64px;
+  align-items:start;
+}
 
-    h1{
-      margin:0;
-      max-width:1000px;
-      font-size:clamp(54px,8vw,112px);
-      line-height:.92;
-      letter-spacing:-.055em;
-      font-weight:500;
-    }
+.hero-copy{
+  min-width:0;
+}
 
-    .hero-lower{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:56px;
-      margin-top:34px;
-    }
+.kicker{
+  margin:0 0 26px;
+  color:var(--muted);
+  font-size:13px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
 
-    .hero-actions{
-      display:flex;
-      flex-wrap:wrap;
-      align-items:flex-start;
-      gap:26px;
-    }
+h1{
+  margin:0;
+  max-width:760px;
+  font-size:clamp(54px,8vw,112px);
+  line-height:.92;
+  letter-spacing:-.055em;
+  font-weight:500;
+}
 
-    .hero-empty{
-      min-height:1px;
-    }
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:flex-start;
+  gap:26px;
+  margin-top:34px;
+}
+
+.hero-photo-wrap{
+  width:100%;
+}
+
+.hero-photo{
+  width:100%;
+  aspect-ratio:4 / 5;
+  object-fit:cover;
+  object-position:center top;
+  border:1px solid var(--line);
+}
 
     .text-link{
       display:inline-flex;
@@ -478,27 +491,28 @@
         font-size:12px;
       }
 
-      .hero{
-        padding:64px 0 52px;
-      }
+.hero{
+  padding:64px 0 52px;
+}
 
-      h1{
-        font-size:56px;
-      }
+.hero-grid{
+  grid-template-columns:1fr;
+  gap:28px;
+}
 
-      .hero-lower{
-        grid-template-columns:1fr;
-        gap:26px;
-        margin-top:28px;
-      }
+h1{
+  font-size:56px;
+  max-width:none;
+}
 
-      .hero-actions{
-        justify-content:flex-start;
-      }
+.hero-actions{
+  justify-content:flex-start;
+  margin-top:28px;
+}
 
-      .hero-empty{
-        display:none;
-      }
+.hero-photo-wrap{
+  max-width:360px;
+}
 
       section.content-section{
         padding:64px 0 74px;
@@ -567,21 +581,23 @@
 
   <main>
 
-    <section class="hero">
-      <div class="wrap">
-        <p class="kicker">Digital Communications · Marketing · Content Creation· EU & Technology</p>
-        <h1>Raquel Nogal Santamaría</h1>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="kicker">DIGITAL COMMUNICATIONS · MARKETING · CONTENT CREATION · EU & TECHNOLOGY</p>
+      <h1>Raquel Nogal Santamaría</h1>
 
-        <div class="hero-lower">
-          <div class="hero-actions">
-            <a class="text-link" href="#contact">Get in touch ↘</a>
-            <a class="text-link" href="RaquelNogalSantamaria_CV.pdf" target="_blank">View CV ↗</a>
-          </div>
-
-          <div class="hero-empty" aria-hidden="true"></div>
-        </div>
+      <div class="hero-actions">
+        <a class="text-link" href="#contact">Get in touch ↘</a>
+        <a class="text-link" href="RaquelNogalSantamaria_CV.pdf" target="_blank">View CV ↗</a>
       </div>
-    </section>
+    </div>
+
+    <div class="hero-photo-wrap">
+      <img class="hero-photo" src="1.DSC00932.JPG" alt="Portrait of Raquel Nogal Santamaría">
+    </div>
+  </div>
+</section>
 
     <section id="about" class="content-section">
       <div class="wrap section-grid">
