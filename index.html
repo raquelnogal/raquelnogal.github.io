@@ -143,7 +143,7 @@
       border:1px solid var(--line);
     }
 
-    /* Uniform arrows across the website */
+    /* Uniform arrows */
     .text-link{
       display:inline-flex;
       align-items:center;
@@ -153,8 +153,7 @@
       font-size:14px;
     }
 
-    .text-link::after,
-    .contact-list a::after{
+    .text-link::after{
       content:"↗";
       display:inline-block;
       font-size:14px;
@@ -343,15 +342,14 @@
     /* Three columns for Skills */
     .skills-chips{
       display:grid;
-      grid-template-columns:repeat(3,max-content);
+      grid-template-columns:repeat(3,minmax(0,1fr));
     }
 
     .skills-chips .chip{
-      padding:7px 8px;
-      font-size:12px;
-      white-space:nowrap;
+      min-width:0;
     }
 
+    /* Same size for Languages and Skills */
     .chip{
       padding:8px 12px;
       border:1px solid var(--line);
@@ -359,48 +357,9 @@
       background:var(--bg);
     }
 
-    /* Contact */
-    #contact{
-      padding:54px 0 42px;
+    /* Single divider above footer */
+    #details{
       border-bottom:none;
-    }
-
-    .contact-grid{
-      display:grid;
-      grid-template-columns:minmax(0,var(--section-sidebar)) minmax(0,1fr);
-      gap:var(--section-gap);
-      align-items:start;
-    }
-
-    .contact-content{
-      width:100%;
-      max-width:var(--narrow);
-    }
-
-    #contact h2{
-      margin:0;
-      font-size:clamp(32px,3.6vw,46px);
-      line-height:1.05;
-      letter-spacing:-.05em;
-      font-weight:500;
-    }
-
-    .contact-list{
-      margin-top:26px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:24px;
-      color:var(--muted);
-      font-size:14px;
-    }
-
-    .contact-list a{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      color:var(--text);
-      border-bottom:1px solid var(--text);
-      padding-bottom:3px;
     }
 
     /* Footer */
@@ -500,20 +459,14 @@
         padding:46px 0 50px;
       }
 
-      #contact{
-        padding:44px 0 34px;
-      }
-
       .section-grid,
-      .portfolio-cta-inner,
-      .contact-grid{
+      .portfolio-cta-inner{
         grid-template-columns:1fr;
         gap:24px;
       }
 
       .section-title,
-      .portfolio-cta h2,
-      #contact h2{
+      .portfolio-cta h2{
         font-size:clamp(28px,5.8vw,40px);
       }
 
@@ -541,10 +494,6 @@
         grid-template-columns:repeat(2,minmax(0,1fr));
       }
 
-      .skills-chips .chip{
-        white-space:normal;
-      }
-
       .footer-row{
         flex-direction:column;
         align-items:flex-start;
@@ -563,7 +512,7 @@
       <nav class="links" aria-label="Main navigation">
         <a href="#experience">Experience</a>
         <a href="/portfolio/">Portfolio</a>
-        <a href="#contact">Contact</a>
+        <a href="mailto:rnogalsantamaria@gmail.com">Contact</a>
       </nav>
     </div>
   </header>
@@ -595,7 +544,7 @@
           </div>
 
           <div class="hero-actions">
-           <a class="text-link" href="#contact">Email</a>
+            <a class="text-link" href="mailto:rnogalsantamaria@gmail.com">Email</a>
             <a class="text-link" href="RaquelNogalSantamaria_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
             <a class="text-link" href="https://www.linkedin.com/in/raquel-nogal-santamaria/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
@@ -810,27 +759,6 @@
               <span class="chip">Events &amp; Partnerships</span>
               <span class="chip">Digital Policy</span>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-      <div class="wrap contact-grid">
-        <div class="section-label">Contact</div>
-
-        <div class="contact-content">
-          <h2>Interested in my work?</h2>
-
-          <div class="contact-list">
-            <span>rnogalsantamaria [at] gmail [dot] com</span>
-
-            <a href="https://www.linkedin.com/in/raquel-nogal-santamaria/"
-               target="_blank"
-               rel="noopener">
-              LinkedIn
-            </a>
           </div>
         </div>
       </div>
